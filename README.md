@@ -1,44 +1,42 @@
-# README
+This application is a simulation version of dribbble.
+### This app will have the following features:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+- The ability to create, edit, and destroy "shots" as well as like and unlike individual shots.
+- User roles and authentication
+- Drag and drop functionality
+- Commenting functionality
+- View counts/analytics
+- A custom responsive shot grid UI using CSS Grid
 
-Things you may want to cover:
+### Getting started
 
-* Ruby version
+```bash
+$ git clone https://github.com/ngocban284/dribble_clone.git
+```
 
-* System dependencies
+### Open folder and get Bundle gem
 
-* Configuration
+```bash
+$ bundle install
+```
 
-* Database creation
+### Run dribble clone
 
-* Database initialization
+```bash
+$ rails s
+```
 
-* How to run the test suite
+#### The Gem List
 
-* Services (job queues, cache servers, search engines, etc.)
+gem list has grown build.
 
-* Deployment instructions
-
-* ...
-
-# Các gem được sử dụng 
-* bulma-rails : framework của css tương tự bootstrap
-* devise : khuôn mẫu dùng để xác thực đăng nhập , sing_in,log_in ...v.v
-* carrierwave : cung cấp chức năng upload , đăng tải hình ảnh| model thêm mount_uploader:ten_thuoc_tinh , ten_thuoc_tinhUpLoader 
-* simple_form : cung cấp 1 simple_form dùng trong view
-* mini_magick : Thao tác hình ảnh với mức sử dụng bộ nhớ tối thiểu
-* impressionist : dùng để đếm lượt xem của 1 đối tượng .is_impressionable đặt trong model đối tượng , impressionist đặt trong controller. 
-                                                                                        Tra cứu view :  @model.impression.count
-* jquery-rails : jQuery cung cấp các phương thức xử lý sự kiện, hiệu ứng, tương tác  chỉ với những dòng lệnh đơn giản
-* gravatar : cung cấp cách thức lấy ảnh đại diện qua mail
-* acts_as_votable : cung cấp chức nặng like , dislike . acts_as_votable thêm vào Model đc vote | acts_as_voter thêm vào model đi vote
-* guard : Guard là một công cụ dòng lệnh để dễ dàng xử lý các sự kiện về sửa đổi hệ thống tệp.
-* guard livereload : tự động reload lại server khi các mục trong view được sửa đổi 
-* better_errors : bắt lỗi tốt hơn 
-
-# các hàm lạ 
-* <%= truncate(shot.description, length: 60) %> : dùng để giới hạn độ dài 
-* <%= time_ago_in_words(@shot.created_at) %> : hiển thị thời gian đối tượng được tạo 
-<%= pluralize(@shot.comments.count, 'Comment') %> :  in ra số lượng của đối số 
+- [CarrierWave](https://github.com/carrierwaveuploader/carrierwave) + [Mini Magick](https://github.com/minimagick/minimagick) - For image uploads and optimization
+- [Devise](https://github.com/plataformatec/devise) - User authentication and roles
+- [Guard](https://github.com/guard/guard) - Doing work to files as they change - A task runner of sorts
+- [Guard Livereload](https://github.com/guard/guard-livereload) - Reloads the browser when files change combined with the Live Reload extension on your favorite browser.
+- [Better Errors](https://github.com/charliesome/better_errors) - Displays better errors during development.
+- [Simple Form](https://github.com/plataformatec/simple_form) - Simpler forms in Rails
+- [Bulma Rails](https://github.com/joshuajansen/bulma-rails) - My favorite CSS framework as of late based on Flexbox.
+- [Impressionist](https://github.com/charlotte-ruby/impressionist) - We use this to get view counts on shots
+- [Gravatar Image Tag](https://github.com/mdeering/gravatar_image_tag) - Easy way to grab a user's gravatar image based on their account email
+- [Acts As Votable](https://github.com/ryanto/acts_as_votable) - Like and unlike shots
